@@ -1,0 +1,8 @@
+# 依赖
+node_modules/
+AGENTS.md
+
+# 系统/编辑器
+.DS_Store
+Thumbs.db
+*.log

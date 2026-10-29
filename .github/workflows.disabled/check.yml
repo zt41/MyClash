@@ -1,0 +1,30 @@
+name: check
+
+on:
+  push:
+    branches: ['main']
+    paths:
+      - 'Script/*'
+  pull_request:
+    paths:
+      - 'Script/*'
+  workflow_dispatch:
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: check script syntax
+        run: node --check Script/mihomoScript.js
+
+      - name: run smoke test
+        run: node Test/smoke-test.js
