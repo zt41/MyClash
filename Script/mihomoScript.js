@@ -142,8 +142,9 @@ const directProxies = [
 
 // 图标 URL 公共前缀
 // 策略组图标地址，图标文件存放在本仓库 Icons/ 目录下（自托管，不依赖上游仓库）
-// 如需换回上游图标，改为：https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/
-const iconBaseUrl = 'https://cdn.jsdmirror.com/gh/zt41/MyClash@main/Icons/svg/';
+// 走 jsDelivr CDN；若 jsdmirror 已完成同步，可改为：https://cdn.jsdmirror.com/gh/zt41/MyClash@main/Icons/svg/
+// 如需用上游图标，改为：https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/
+const iconBaseUrl = 'https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/';
 
 // 规则集 URL 公共前缀
 const ruleSetBaseUrl = 'https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/';
