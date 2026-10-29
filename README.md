@@ -71,7 +71,9 @@ node Test/smoke-test.js
 | 自定义前置/兜底规则 | `prefixRules` / 脚本末尾 `newConfig['rules']` |
 | 换图标 | 替换 `Icons/svg/` 下同名文件，或修改 `iconBaseUrl` |
 
-图标地址 `iconBaseUrl` 默认指向本仓库 `Icons/svg/` 目录（自托管，不依赖上游仓库）。若想用上游图标，改成 `https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/` 即可。
+图标地址 `iconBaseUrl` 默认走 jsDelivr CDN，指向本仓库 `Icons/svg/` 目录（自托管，不依赖上游仓库）。若想用上游图标，改成 `https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/` 即可。
+
+图标只影响客户端里的策略组显示，加载失败不影响分流功能。
 
 ## 已知差异（相对上游）
 
