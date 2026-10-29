@@ -543,7 +543,8 @@ const serviceConfigs = [
         'path-in-bundle': 'geo/geosite/nintendo.mrs',
       },
     },
-    icon: `${iconBaseUrl}Steam.svg`,
+    // 图标存放在 Icons/png/Nintendo.png（原图为用户提供）
+    icon: 'https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/png/Nintendo.png',
     rules: [
       'RULE-SET,nintendo,Nintendo',
       // 任天堂服务器域名（补充）
