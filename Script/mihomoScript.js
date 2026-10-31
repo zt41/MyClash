@@ -45,6 +45,7 @@ const ruleOptionsEnable = {
   PayPal: true, // PayPal支付服务
   Patreon: true, // Patreon创作者赞助平台
   EHentai: true, // E-Hentai网站
+  Bilibili: true, // B站视频平台（默认直连，可用于港澳台限定内容）
   AdBlock: true, // 广告拦截
 
   // 以下为非分流策略配置
@@ -817,6 +818,24 @@ const serviceConfigs = [
       'PROCESS-NAME,RodelPlayer.App.exe,Emby',
       'PROCESS-NAME,com.feifeiduck.capyplayer,Emby',
     ],
+  },
+  {
+    name: 'Bilibili',
+    baseOption: selectBaseOption,
+    defaultSelected: '直连',
+    direct: true,
+    providers: {
+      bilibili: {
+        ...ruleProviderCommonDomain,
+        url: `${ruleSetBaseUrl}geosite/bilibili.mrs`,
+        path: './ruleset/bilibili.mrs',
+        'path-in-bundle': 'geo/geosite/bilibili.mrs',
+      },
+    },
+    icon: `${iconBaseUrl}Bilibili.svg`,
+    // 注意：RULE-SET,bilibili 规则在 main() 中注入到 geolocation-cn（国内直连）之前，
+    // 否则会被国内直连规则提前命中，分组永远不生效
+    rules: [],
   },
   {
     name: 'PikPak',
@@ -1801,8 +1820,16 @@ function main(config) {
   ];
   newConfig['rule-providers'] = finalRuleProviders;
 
+  // B站分流规则必须置于 geolocation-cn（国内直连）之前，否则会被国内直连规则提前命中
+  const bilibiliPrefixRules = ruleOptionsEnable.Bilibili ? ['RULE-SET,bilibili,Bilibili'] : [];
+  const geolocationCnIndex = prefixRules.findIndex((r) => r.startsWith('RULE-SET,geolocation-cn,'));
+  const effectivePrefixRules =
+    geolocationCnIndex === -1
+      ? [...prefixRules, ...bilibiliPrefixRules]
+      : [...prefixRules.slice(0, geolocationCnIndex), ...bilibiliPrefixRules, ...prefixRules.slice(geolocationCnIndex)];
+
   newConfig['rules'] = [
-    ...prefixRules,
+    ...effectivePrefixRules,
     ...(ruleOptionsEnable.屏蔽国外QUIC ? blockForeignQuic : []),
     ...functionalRules,
 
