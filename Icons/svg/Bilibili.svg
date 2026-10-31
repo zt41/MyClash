@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- 天线 -->
+  <path d="M172 92 L248 172" stroke="#FB7299" stroke-width="26" stroke-linecap="round" fill="none"/>
+  <path d="M340 92 L264 172" stroke="#FB7299" stroke-width="26" stroke-linecap="round" fill="none"/>
+  <!-- 电视机身 -->
+  <rect x="56" y="168" width="400" height="288" rx="64" fill="#FB7299"/>
+  <!-- 眼睛 -->
+  <rect x="148" y="248" width="38" height="92" rx="19" fill="#FFFFFF"/>
+  <rect x="326" y="248" width="38" height="92" rx="19" fill="#FFFFFF"/>
+  <!-- 嘴 -->
+  <path d="M230 372 Q256 396 282 372" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" fill="none"/>
+</svg>
