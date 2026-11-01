@@ -24,7 +24,7 @@ jobs:
 
       - name: 运行覆写脚本生成最终配置
         env:
-          SUB_URL: ${{ secrets.SUB_URL }}
+          SUB_URL: ${{ secrets.CXY }}
         run: node Script/generate.js
 
       - name: 提交结果到仓库
