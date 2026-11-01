@@ -437,8 +437,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: GLOBAL
     proxies:
@@ -488,8 +486,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: 默认代理
     proxies:
@@ -507,8 +503,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: 手动选择
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Static.svg
@@ -539,13 +533,9 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: url-test
     tolerance: 50
-    exclude-type: DIRECT
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
-    hidden: true
     name: 自动选择
     proxies:
       - 🇯🇵 日本•移联01
@@ -574,13 +564,9 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: load-balance
-    strategy: sticky-sessions
-    exclude-type: DIRECT
+    strategy: round-robin
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/RoundRobin.svg
-    hidden: true
     name: 负载均衡
     proxies:
       - 🇯🇵 日本•移联01
@@ -609,8 +595,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: FCM
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Fcm.svg
@@ -631,8 +615,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: YouTube
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/YouTube.svg
@@ -651,8 +633,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Google
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Google.svg
@@ -671,8 +651,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: AI
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/OpenAI.svg
@@ -692,8 +670,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Microsoft
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Microsoft.svg
@@ -713,8 +689,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Apple
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Apple.svg
@@ -734,8 +708,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Telegram
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Telegram.svg
@@ -754,8 +726,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Steam
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Steam.svg
@@ -775,8 +745,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Nintendo
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/png/Nintendo.png
@@ -796,8 +764,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: TikTok
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/TikTok.svg
@@ -817,8 +783,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Twitter
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Twitter.svg
@@ -837,8 +801,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Meta
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Meta.svg
@@ -857,8 +819,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Line
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Line.svg
@@ -877,8 +837,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Netflix
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Netflix.svg
@@ -897,8 +855,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Emby
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Emby.svg
@@ -918,8 +874,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Bilibili
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Bilibili.svg
@@ -940,8 +894,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: PikPak
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/PikPak.svg
@@ -961,8 +913,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Spotify
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Spotify.svg
@@ -982,8 +932,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Crypto
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Bitcoin.svg
@@ -1003,8 +951,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: PayPal
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/PayPal.svg
@@ -1024,8 +970,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: Patreon
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Patreon.svg
@@ -1045,8 +989,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: EHentai
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/EHentai.svg
@@ -1067,8 +1009,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: AdBlock
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/AdBlock.svg
@@ -1080,8 +1020,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: 漏网之鱼
     proxies:
@@ -1098,8 +1036,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: 直连
     proxies:
@@ -1109,18 +1045,13 @@ proxy-groups:
       - 🇨🇳 直连 | 仅IPv4
       - 🇨🇳 直连 | 仅IPv6
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/China.svg
-    hidden: false
   - interval: 600
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: url-test
     tolerance: 50
-    exclude-type: DIRECT
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
-    hidden: true
     name: 香港-自动选择
     proxies:
       - 🇭🇰 香港•移联01
@@ -1131,8 +1062,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: 香港
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/HongKong.svg
@@ -1142,18 +1071,13 @@ proxy-groups:
       - 🇭🇰 香港•电信01
       - 🇭🇰 香港•电信02
       - 香港-自动选择
-    hidden: false
   - interval: 600
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: url-test
     tolerance: 50
-    exclude-type: DIRECT
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
-    hidden: true
     name: 日本-自动选择
     proxies:
       - 🇯🇵 日本•移联01
@@ -1164,8 +1088,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: 日本
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Japan.svg
@@ -1175,18 +1097,13 @@ proxy-groups:
       - 🇯🇵 日本•电信01
       - 🇯🇵 日本•电信02
       - 日本-自动选择
-    hidden: false
   - interval: 600
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: url-test
     tolerance: 50
-    exclude-type: DIRECT
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
-    hidden: true
     name: 美国-自动选择
     proxies:
       - 🇺🇸 美国•移联01
@@ -1195,8 +1112,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: 美国
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/America.svg
@@ -1204,18 +1119,13 @@ proxy-groups:
       - 🇺🇸 美国•移联01
       - 🇺🇸 美国•电信01
       - 美国-自动选择
-    hidden: false
   - interval: 600
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: url-test
     tolerance: 50
-    exclude-type: DIRECT
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
-    hidden: true
     name: 新加坡-自动选择
     proxies:
       - 🇸🇬 新加坡•移联01
@@ -1226,8 +1136,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: 新加坡
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Singapore.svg
@@ -1237,18 +1145,13 @@ proxy-groups:
       - 🇸🇬 新加坡•电信01
       - 🇸🇬 新加坡•电信02
       - 新加坡-自动选择
-    hidden: false
   - interval: 600
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: url-test
     tolerance: 50
-    exclude-type: DIRECT
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
-    hidden: true
     name: 台湾-自动选择
     proxies:
       - 🇨🇳 台湾•移联01
@@ -1257,8 +1160,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: 台湾
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Taiwan.svg
@@ -1266,18 +1167,13 @@ proxy-groups:
       - 🇨🇳 台湾•移联01
       - 🇨🇳 台湾•电信01
       - 台湾-自动选择
-    hidden: false
   - interval: 600
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: url-test
     tolerance: 50
-    exclude-type: DIRECT
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
-    hidden: true
     name: 其他节点-自动选择
     proxies:
       - 🇰🇷 韩国•移联01
@@ -1290,8 +1186,6 @@ proxy-groups:
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
-    max-failed-times: 3
-    empty-fallback: REJECT
     type: select
     name: 其他节点
     icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/WorldMap.svg
@@ -1303,7 +1197,6 @@ proxy-groups:
       - 🇬🇧 英国•电信01
       - 🇩🇪 德国•电信01
       - 其他节点-自动选择
-    hidden: false
 rule-providers:
   private:
     type: http
