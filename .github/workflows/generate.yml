@@ -15,6 +15,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -38,3 +40,16 @@ jobs:
             git commit -m "chore: 自动更新订阅配置 $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
           fi
+
+      - name: 更新 latest 标签并刷新 CDN 缓存
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # 把 latest 标签强制移到当前 HEAD（最新提交）
+          git tag -f latest
+          git push -f origin latest
+          # jsDelivr 对分支/标签有版本解析缓存，尽量主动 purge 触发刷新
+          for ref in main latest; do
+            curl -s -o /dev/null --max-time 20 "https://purge.jsdelivr.net/gh/zt41/MyClash@${ref}/output/clash.yaml" || true
+          done
+          echo "latest 标签已更新，已触发 CDN 刷新"
