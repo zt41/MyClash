@@ -138,7 +138,32 @@ async function run() {
   const providers = result['rule-providers'] || {};
   console.log(`   ${groups.length} 个策略组，${rules.length} 条规则，${Object.keys(providers).length} 个规则集`);
 
-  console.log('5. 输出最终 YAML...');
+  // Stash 兼容处理：替换不支持的字段
+  console.log('5. Stash 兼容处理...');
+  let compatCount = 0;
+  for (const g of groups) {
+    // sticky-sessions → round-robin（Stash 不支持 sticky-sessions）
+    if (g.strategy === 'sticky-sessions') {
+      g.strategy = 'round-robin';
+      compatCount++;
+    }
+    // Stash 不支持的扩展字段，直接删除
+    for (const key of ['hidden', 'exclude-type', 'include-all', 'include-all-proxies', 'include-all-providers', 'empty-fallback', 'max-failed-times']) {
+      if (key in g) { delete g[key]; compatCount++; }
+    }
+  }
+  // 处理 proxies 中 Stash 可能不支持的字段
+  if (Array.isArray(result.proxies)) {
+    for (const p of result.proxies) {
+      for (const key of ['udp', 'skip-cert-verify', 'sni', 'alpn', 'fingerprint', 'client-fingerprint', 'reality-opts', 'flow', 'ws-opts', 'h2-opts', 'grpc-opts']) {
+        // 保留这些字段，Stash 大多支持，先不删
+      }
+    }
+  }
+  if (compatCount > 0) console.log(`   处理了 ${compatCount} 处不兼容字段`);
+  else console.log('   无需处理');
+
+  console.log('6. 输出最终 YAML...');
   const output = yaml.dump(result, { lineWidth: -1, noRefs: true, sortKeys: false });
 
   const outDir = path.join(__dirname, '..', 'output');
