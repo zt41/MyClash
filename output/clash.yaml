@@ -1,0 +1,1897 @@
+dns:
+  enable: true
+  ipv6: true
+  use-hosts: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/15
+  fake-ip-range6: 2001:2::1/48
+  fake-ip-filter:
+    - rule-set:private
+    - rule-set:fakeip_filter
+    - rule-set:geolocation-cn
+    - rule-set:googlefcm
+  default-nameserver:
+    - 114.114.114.114#DIRECT
+    - tls://223.5.5.5#DIRECT
+    - https://1.12.12.12/dns-query#DIRECT
+  proxy-server-nameserver:
+    - 114.114.114.114#DIRECT
+    - tls://223.5.5.5#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  nameserver:
+    - https://cloudflare-dns.com/dns-query#默认代理
+    - https://dns.google/dns-query#默认代理
+  nameserver-policy:
+    rule-set:private: system
+    rule-set:douyin:
+      - system
+      - 180.184.1.1
+      - 180.184.2.2
+    rule-set:cn:
+      - 223.5.5.5#DIRECT
+      - 119.29.29.29#DIRECT
+  direct-nameserver:
+    - 223.5.5.5#DIRECT
+    - 119.29.29.29#DIRECT
+  direct-nameserver-follow-policy: true
+hosts:
+  doh.pub:
+    - 1.12.12.12
+    - 120.53.53.53
+  cloudflare-dns.com:
+    - 1.1.1.1
+    - 1.0.0.1
+  dns.google:
+    - 8.8.8.8
+    - 8.8.4.4
+  services.googleapis.cn: services.googleapis.com
+  +.mcdn.bilivideo.com:
+    - 0.0.0.0
+  +.mcdn.bilivideo.cn:
+    - 0.0.0.0
+  +.edge.mountaintoys.cn:
+    - 0.0.0.0
+  +.h2.smtcdns.net:
+    - 0.0.0.0
+mixed-port: 7890
+allow-lan: true
+ipv6: true
+mode: rule
+log-level: info
+bind-address: '*'
+unified-delay: true
+tcp-concurrent: true
+keep-alive-interval: 60
+find-process-mode: strict
+external-controller: 127.0.0.1:9090
+external-ui: ui
+external-ui-url: https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip
+profile:
+  store-selected: true
+  store-fake-ip: true
+ntp:
+  enable: true
+  write-to-system: false
+  server: ntp.aliyun.com
+  port: 123
+  interval: 60
+tun:
+  enable: true
+  stack: mips
+  auto-route: true
+  strict-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+proxies:
+  - name: 🇯🇵 日本•移联01
+    type: vless
+    server: chuixuevl1.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    servername: updates.cdn-apple.com
+    reality-opts:
+      public-key: 70V0gDLKL3niFsNn__9MQhPMCTB_M4kNdbOKNIulii4
+      short-id: 3191b53b
+  - name: 🇯🇵 日本•移联02
+    type: vless
+    server: chuixuevl2.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    servername: updates.cdn-apple.com
+    reality-opts:
+      public-key: XKNiiKGcjlO5JmFjfXAyWj3utWzrVJRRmoiCF_pVPDQ
+      short-id: 471edb92
+  - name: 🇸🇬 新加坡•移联01
+    type: vless
+    server: chuixuevl5.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    servername: download-porter.hoyoverse.com
+    reality-opts:
+      public-key: 230FTZ3Ru5jE7nCLs4KAhEQiBM_EpBp7O9_NG3u7ERc
+      short-id: d5740dcf
+  - name: 🇸🇬 新加坡•移联02
+    type: vless
+    server: chuixuevl6.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    servername: download-porter.hoyoverse.com
+    reality-opts:
+      public-key: NuSMwFxLxd9qfns2RiEYN-fJ-UUqbzQbmNSO9RAPzRc
+      short-id: e49dd779
+  - name: 🇭🇰 香港•移联01
+    type: vless
+    server: chuixuevl9.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    servername: cdn-dynmedia-1.microsoft.com
+    reality-opts:
+      public-key: Bt8p1w1P5zWruU_Blg11Y0bBiB7mHy6-4GZLZtPeREw
+      short-id: b2248634
+  - name: 🇭🇰 香港•移联02
+    type: vless
+    server: chuixuevl10.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    servername: cdn-dynmedia-1.microsoft.com
+    reality-opts:
+      public-key: 888QlOQEHED3U5VxsxhV_VXnpfADETzFK9UDN6ah_SA
+      short-id: c2024015
+  - name: 🇨🇳 台湾•移联01
+    type: vless
+    server: chuixuevl13.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    servername: cdn-dynmedia-1.microsoft.com
+    reality-opts:
+      public-key: x5IsvrCQ4FHXVbMDyPGwAhz6WXpIVmbLTnXy75NnaBs
+      short-id: 811796cb
+  - name: 🇰🇷 韩国•移联01
+    type: vless
+    server: chuixuevl15.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    servername: cdn-dynmedia-1.microsoft.com
+    reality-opts:
+      public-key: fn0ZwK-F94hdTCZvJfZ7uLsDrWqdwBmV6rYLgOP5YTQ
+      short-id: ecd3afe5
+  - name: 🇺🇸 美国•移联01
+    type: vless
+    server: chuixuevl17.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    servername: cdn-dynmedia-1.microsoft.com
+    reality-opts:
+      public-key: DUrmcdsv85_SgKUm7w5vjyd8m6WgHkpmumfrfPQCTxQ
+      short-id: 78a81ddc
+  - name: 🇬🇧 英国•移联01
+    type: vless
+    server: chuixuevl20.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: safari
+    servername: cdn-dynmedia-1.microsoft.com
+    reality-opts:
+      public-key: 8kEyxV5uB0TQzUbTw2olPNb0tLmAcLlwoRilMdnsGDA
+      short-id: c4cd3ee1
+  - name: 🇩🇪 德国•移联01
+    type: vless
+    server: chuixuevl22.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: xtls-rprx-vision
+    client-fingerprint: ios
+    servername: cdn-dynmedia-1.microsoft.com
+    reality-opts:
+      public-key: ob_T9VBi0SdFhWh8MfyRnnjqoyvBpjrt10RcT-49hmc
+      short-id: f4008fa8
+  - name: 🇯🇵 日本•电信01
+    type: vless
+    server: chuixuecf.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: ios
+    servername: vipjp1.cyberguard-u1s1.top
+    network: ws
+    ws-opts:
+      path: /chuixue/jp1
+      headers:
+        Host: vipjp1.cyberguard-u1s1.top
+  - name: 🇯🇵 日本•电信02
+    type: vless
+    server: chuixuecf.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: safari
+    servername: vipjp2.cyberguard-u1s1.top
+    network: ws
+    ws-opts:
+      path: /chuixue/jp2
+      headers:
+        Host: vipjp2.cyberguard-u1s1.top
+  - name: 🇸🇬 新加坡•电信01
+    type: vless
+    server: chuixuecf.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: safari
+    servername: vipsg1.cyberguard-u1s1.top
+    network: ws
+    ws-opts:
+      path: /chuixue/sg1
+      headers:
+        Host: vipsg1.cyberguard-u1s1.top
+  - name: 🇸🇬 新加坡•电信02
+    type: vless
+    server: chuixuecf.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: safari
+    servername: vipsg2.cyberguard-u1s1.top
+    network: ws
+    ws-opts:
+      path: /chuixue/sg2
+      headers:
+        Host: vipsg2.cyberguard-u1s1.top
+  - name: 🇭🇰 香港•电信01
+    type: vless
+    server: chuixuecf.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: safari
+    servername: viphk1.cyberguard-u1s1.top
+    network: ws
+    ws-opts:
+      path: /chuixue/hk1
+      headers:
+        Host: viphk1.cyberguard-u1s1.top
+  - name: 🇭🇰 香港•电信02
+    type: vless
+    server: chuixuecf.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: ios
+    servername: viphk2.cyberguard-u1s1.top
+    network: ws
+    ws-opts:
+      path: /chuixue/hk2
+      headers:
+        Host: viphk2.cyberguard-u1s1.top
+  - name: 🇨🇳 台湾•电信01
+    type: vless
+    server: chuixuecf.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: safari
+    servername: viptw1.cyberguard-u1s1.top
+    network: ws
+    ws-opts:
+      path: /chuixue/tw1
+      headers:
+        Host: viptw1.cyberguard-u1s1.top
+  - name: 🇰🇷 韩国•电信01
+    type: vless
+    server: chuixuecf.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: ios
+    servername: vipkr1.cyberguard-u1s1.top
+    network: ws
+    ws-opts:
+      path: /chuixue/kr1
+      headers:
+        Host: vipkr1.cyberguard-u1s1.top
+  - name: 🇺🇸 美国•电信01
+    type: vless
+    server: chuixuecf.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: ios
+    servername: vipus1.cyberguard-u1s1.top
+    network: ws
+    ws-opts:
+      path: /chuixue/us1
+      headers:
+        Host: vipus1.cyberguard-u1s1.top
+  - name: 🇬🇧 英国•电信01
+    type: vless
+    server: chuixuecf.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: ios
+    servername: vipgb1.cyberguard-u1s1.top
+    network: ws
+    ws-opts:
+      path: /chuixue/gb1
+      headers:
+        Host: vipgb1.cyberguard-u1s1.top
+  - name: 🇩🇪 德国•电信01
+    type: vless
+    server: chuixuecf.blowingsnowclouds.cc
+    port: 443
+    uuid: 192d705a-3bf1-49d2-a448-6d14169137ef
+    udp: true
+    tls: true
+    skip-cert-verify: false
+    flow: ''
+    client-fingerprint: safari
+    servername: vipde1.cyberguard-u1s1.top
+    network: ws
+    ws-opts:
+      path: /chuixue/de1
+      headers:
+        Host: vipde1.cyberguard-u1s1.top
+  - name: 🇨🇳 直连 | 双栈
+    type: direct
+  - name: 🇨🇳 直连 | IPv4优先
+    type: direct
+    ip-version: ipv4-prefer
+  - name: 🇨🇳 直连 | IPv6优先
+    type: direct
+    ip-version: ipv6-prefer
+  - name: 🇨🇳 直连 | 仅IPv4
+    type: direct
+    ip-version: ipv4
+  - name: 🇨🇳 直连 | 仅IPv6
+    type: direct
+    ip-version: ipv6
+proxy-groups:
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: GLOBAL
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - FCM
+      - YouTube
+      - Google
+      - AI
+      - Microsoft
+      - Apple
+      - Telegram
+      - Steam
+      - Nintendo
+      - TikTok
+      - Twitter
+      - Meta
+      - Line
+      - Netflix
+      - Emby
+      - Bilibili
+      - PikPak
+      - Spotify
+      - Crypto
+      - PayPal
+      - Patreon
+      - EHentai
+      - AdBlock
+      - 漏网之鱼
+      - 直连
+      - 香港-自动选择
+      - 香港
+      - 日本-自动选择
+      - 日本
+      - 美国-自动选择
+      - 美国
+      - 新加坡-自动选择
+      - 新加坡
+      - 台湾-自动选择
+      - 台湾
+      - 其他节点-自动选择
+      - 其他节点
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Global.svg
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: 默认代理
+    proxies:
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Proxy.svg
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: 手动选择
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Static.svg
+    proxies:
+      - 🇯🇵 日本•移联01
+      - 🇯🇵 日本•移联02
+      - 🇸🇬 新加坡•移联01
+      - 🇸🇬 新加坡•移联02
+      - 🇭🇰 香港•移联01
+      - 🇭🇰 香港•移联02
+      - 🇨🇳 台湾•移联01
+      - 🇰🇷 韩国•移联01
+      - 🇺🇸 美国•移联01
+      - 🇬🇧 英国•移联01
+      - 🇩🇪 德国•移联01
+      - 🇯🇵 日本•电信01
+      - 🇯🇵 日本•电信02
+      - 🇸🇬 新加坡•电信01
+      - 🇸🇬 新加坡•电信02
+      - 🇭🇰 香港•电信01
+      - 🇭🇰 香港•电信02
+      - 🇨🇳 台湾•电信01
+      - 🇰🇷 韩国•电信01
+      - 🇺🇸 美国•电信01
+      - 🇬🇧 英国•电信01
+      - 🇩🇪 德国•电信01
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: url-test
+    tolerance: 50
+    exclude-type: DIRECT
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    hidden: true
+    name: 自动选择
+    proxies:
+      - 🇯🇵 日本•移联01
+      - 🇯🇵 日本•移联02
+      - 🇸🇬 新加坡•移联01
+      - 🇸🇬 新加坡•移联02
+      - 🇭🇰 香港•移联01
+      - 🇭🇰 香港•移联02
+      - 🇨🇳 台湾•移联01
+      - 🇰🇷 韩国•移联01
+      - 🇺🇸 美国•移联01
+      - 🇬🇧 英国•移联01
+      - 🇩🇪 德国•移联01
+      - 🇯🇵 日本•电信01
+      - 🇯🇵 日本•电信02
+      - 🇸🇬 新加坡•电信01
+      - 🇸🇬 新加坡•电信02
+      - 🇭🇰 香港•电信01
+      - 🇭🇰 香港•电信02
+      - 🇨🇳 台湾•电信01
+      - 🇰🇷 韩国•电信01
+      - 🇺🇸 美国•电信01
+      - 🇬🇧 英国•电信01
+      - 🇩🇪 德国•电信01
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: load-balance
+    strategy: sticky-sessions
+    exclude-type: DIRECT
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/RoundRobin.svg
+    hidden: true
+    name: 负载均衡
+    proxies:
+      - 🇯🇵 日本•移联01
+      - 🇯🇵 日本•移联02
+      - 🇸🇬 新加坡•移联01
+      - 🇸🇬 新加坡•移联02
+      - 🇭🇰 香港•移联01
+      - 🇭🇰 香港•移联02
+      - 🇨🇳 台湾•移联01
+      - 🇰🇷 韩国•移联01
+      - 🇺🇸 美国•移联01
+      - 🇬🇧 英国•移联01
+      - 🇩🇪 德国•移联01
+      - 🇯🇵 日本•电信01
+      - 🇯🇵 日本•电信02
+      - 🇸🇬 新加坡•电信01
+      - 🇸🇬 新加坡•电信02
+      - 🇭🇰 香港•电信01
+      - 🇭🇰 香港•电信02
+      - 🇨🇳 台湾•电信01
+      - 🇰🇷 韩国•电信01
+      - 🇺🇸 美国•电信01
+      - 🇬🇧 英国•电信01
+      - 🇩🇪 德国•电信01
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: FCM
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Fcm.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+      - 直连
+    default-selected: 直连
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: YouTube
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/YouTube.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Google
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Google.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: AI
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/OpenAI.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+    default-selected: 美国
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Microsoft
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Microsoft.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+      - 直连
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Apple
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Apple.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+      - 直连
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Telegram
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Telegram.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Steam
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Steam.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+      - 直连
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Nintendo
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/png/Nintendo.png
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+    default-selected: 日本
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: TikTok
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/TikTok.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+    default-selected: 日本
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Twitter
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Twitter.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Meta
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Meta.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Line
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Line.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Netflix
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Netflix.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Emby
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Emby.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+      - 直连
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Bilibili
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Bilibili.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+      - 直连
+    default-selected: 直连
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: PikPak
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/PikPak.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+      - 直连
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Spotify
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Spotify.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+      - 直连
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Crypto
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Bitcoin.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+    default-selected: 日本
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: PayPal
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/PayPal.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+    default-selected: 美国
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: Patreon
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Patreon.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+    default-selected: 香港
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: EHentai
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/EHentai.svg
+    proxies:
+      - 默认代理
+      - 手动选择
+      - 自动选择
+      - 负载均衡
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+      - 直连
+    default-selected: 美国
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: AdBlock
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/AdBlock.svg
+    proxies:
+      - REJECT
+      - REJECT-DROP
+      - PASS
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: 漏网之鱼
+    proxies:
+      - 默认代理
+      - 直连
+      - 香港
+      - 日本
+      - 美国
+      - 新加坡
+      - 台湾
+      - 其他节点
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Stack.svg
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: 直连
+    proxies:
+      - 🇨🇳 直连 | 双栈
+      - 🇨🇳 直连 | IPv4优先
+      - 🇨🇳 直连 | IPv6优先
+      - 🇨🇳 直连 | 仅IPv4
+      - 🇨🇳 直连 | 仅IPv6
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/China.svg
+    hidden: false
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: url-test
+    tolerance: 50
+    exclude-type: DIRECT
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    hidden: true
+    name: 香港-自动选择
+    proxies:
+      - 🇭🇰 香港•移联01
+      - 🇭🇰 香港•移联02
+      - 🇭🇰 香港•电信01
+      - 🇭🇰 香港•电信02
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: 香港
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/HongKong.svg
+    proxies:
+      - 🇭🇰 香港•移联01
+      - 🇭🇰 香港•移联02
+      - 🇭🇰 香港•电信01
+      - 🇭🇰 香港•电信02
+      - 香港-自动选择
+    hidden: false
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: url-test
+    tolerance: 50
+    exclude-type: DIRECT
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    hidden: true
+    name: 日本-自动选择
+    proxies:
+      - 🇯🇵 日本•移联01
+      - 🇯🇵 日本•移联02
+      - 🇯🇵 日本•电信01
+      - 🇯🇵 日本•电信02
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: 日本
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Japan.svg
+    proxies:
+      - 🇯🇵 日本•移联01
+      - 🇯🇵 日本•移联02
+      - 🇯🇵 日本•电信01
+      - 🇯🇵 日本•电信02
+      - 日本-自动选择
+    hidden: false
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: url-test
+    tolerance: 50
+    exclude-type: DIRECT
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    hidden: true
+    name: 美国-自动选择
+    proxies:
+      - 🇺🇸 美国•移联01
+      - 🇺🇸 美国•电信01
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: 美国
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/America.svg
+    proxies:
+      - 🇺🇸 美国•移联01
+      - 🇺🇸 美国•电信01
+      - 美国-自动选择
+    hidden: false
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: url-test
+    tolerance: 50
+    exclude-type: DIRECT
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    hidden: true
+    name: 新加坡-自动选择
+    proxies:
+      - 🇸🇬 新加坡•移联01
+      - 🇸🇬 新加坡•移联02
+      - 🇸🇬 新加坡•电信01
+      - 🇸🇬 新加坡•电信02
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: 新加坡
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Singapore.svg
+    proxies:
+      - 🇸🇬 新加坡•移联01
+      - 🇸🇬 新加坡•移联02
+      - 🇸🇬 新加坡•电信01
+      - 🇸🇬 新加坡•电信02
+      - 新加坡-自动选择
+    hidden: false
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: url-test
+    tolerance: 50
+    exclude-type: DIRECT
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    hidden: true
+    name: 台湾-自动选择
+    proxies:
+      - 🇨🇳 台湾•移联01
+      - 🇨🇳 台湾•电信01
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: 台湾
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Taiwan.svg
+    proxies:
+      - 🇨🇳 台湾•移联01
+      - 🇨🇳 台湾•电信01
+      - 台湾-自动选择
+    hidden: false
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: url-test
+    tolerance: 50
+    exclude-type: DIRECT
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    hidden: true
+    name: 其他节点-自动选择
+    proxies:
+      - 🇰🇷 韩国•移联01
+      - 🇬🇧 英国•移联01
+      - 🇩🇪 德国•移联01
+      - 🇰🇷 韩国•电信01
+      - 🇬🇧 英国•电信01
+      - 🇩🇪 德国•电信01
+  - interval: 600
+    timeout: 3000
+    url: https://www.apple.com/library/test/success.html
+    lazy: true
+    max-failed-times: 3
+    empty-fallback: REJECT
+    type: select
+    name: 其他节点
+    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/WorldMap.svg
+    proxies:
+      - 🇰🇷 韩国•移联01
+      - 🇬🇧 英国•移联01
+      - 🇩🇪 德国•移联01
+      - 🇰🇷 韩国•电信01
+      - 🇬🇧 英国•电信01
+      - 🇩🇪 德国•电信01
+      - 其他节点-自动选择
+    hidden: false
+rule-providers:
+  private:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/private.mrs
+    path: ./ruleset/private.mrs
+    path-in-bundle: geo/geosite/private.mrs
+  private_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/private.mrs
+    path: ./ruleset/private_ip.mrs
+    path-in-bundle: geo/geoip/private.mrs
+  games_cn:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/category-games@cn.mrs
+    path: ./ruleset/category-games@cn.mrs
+    path-in-bundle: geo/geosite/category-games@cn.mrs
+  epicgames:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/epicgames.mrs
+    path: ./ruleset/epicgames.mrs
+    path-in-bundle: geo/geosite/epicgames.mrs
+  nvidia_cn:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/nvidia@cn.mrs
+    path: ./ruleset/nvidia@cn.mrs
+    path-in-bundle: geo/geosite/nvidia@cn.mrs
+  apple_cn:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/apple@cn.mrs
+    path: ./ruleset/apple@cn.mrs
+    path-in-bundle: geo/geosite/apple@cn.mrs
+  microsoft_cn:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/microsoft@cn.mrs
+    path: ./ruleset/microsoft@cn.mrs
+    path-in-bundle: geo/geosite/microsoft@cn.mrs
+  geolocation-cn:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/geolocation-cn.mrs
+    path: ./ruleset/geolocation-cn.mrs
+    path-in-bundle: geo/geosite/geolocation-cn.mrs
+  cn_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/cn.mrs
+    path: ./ruleset/cn_ip.mrs
+    path-in-bundle: geo/geoip/cn.mrs
+  geolocation-!cn:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/geolocation-!cn.mrs
+    path: ./ruleset/geolocation-!cn.mrs
+    path-in-bundle: geo/geosite/geolocation-!cn.mrs
+  fakeip_filter:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/fakeip-filter.mrs
+    path: ./ruleset/fakeip-filter.mrs
+    path-in-bundle: geo/geosite/fakeip-filter.mrs
+  cn_additional:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://static-file-global.353355.xyz/rules/cn-additional-list.mrs
+    path: ./ruleset/cn-additional-list.mrs
+    path-in-bundle: geo/geosite/cn.mrs
+  cn:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/cn.mrs
+    path: ./ruleset/cn.mrs
+    path-in-bundle: geo/geosite/cn.mrs
+  douyin:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/douyin.mrs
+    path: ./ruleset/douyin.mrs
+    path-in-bundle: geo/geosite/douyin.mrs
+  category-ads:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/category-ads.mrs
+    path: ./ruleset/category-ads.mrs
+    path-in-bundle: geo/geosite/category-ads.mrs
+  googlefcm:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/googlefcm.mrs
+    path: ./ruleset/googlefcm.mrs
+    path-in-bundle: geo/geosite/googlefcm.mrs
+  youtube:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/youtube.mrs
+    path: ./ruleset/youtube.mrs
+    path-in-bundle: geo/geosite/youtube.mrs
+  google:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/google.mrs
+    path: ./ruleset/google.mrs
+    path-in-bundle: geo/geosite/google.mrs
+  google_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/google.mrs
+    path: ./ruleset/google_ip.mrs
+    path-in-bundle: geo/geoip/google.mrs
+  ai:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/category-ai-!cn.mrs
+    path: ./ruleset/ai.mrs
+    path-in-bundle: geo/geosite/category-ai-!cn.mrs
+  github:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/github.mrs
+    path: ./ruleset/github.mrs
+    path-in-bundle: geo/geosite/github.mrs
+  microsoft:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/microsoft.mrs
+    path: ./ruleset/microsoft.mrs
+    path-in-bundle: geo/geosite/microsoft.mrs
+  microsoft_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/microsoft.mrs
+    path: ./ruleset/microsoft_ip.mrs
+    path-in-bundle: geo/geoip/microsoft.mrs
+  apple:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/apple.mrs
+    path: ./ruleset/apple.mrs
+    path-in-bundle: geo/geosite/apple.mrs
+  apple_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/apple.mrs
+    path: ./ruleset/apple_ip.mrs
+    path-in-bundle: geo/geoip/apple.mrs
+  telegram:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/telegram.mrs
+    path: ./ruleset/telegram.mrs
+    path-in-bundle: geo/geosite/telegram.mrs
+  telegram_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/telegram.mrs
+    path: ./ruleset/telegram_ip.mrs
+    path-in-bundle: geo/geoip/telegram.mrs
+  steam:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/steam.mrs
+    path: ./ruleset/steam.mrs
+    path-in-bundle: geo/geosite/steam.mrs
+  steam_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/steam.mrs
+    path: ./ruleset/steam_ip.mrs
+    path-in-bundle: geo/geoip/steam.mrs
+  nintendo:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/nintendo.mrs
+    path: ./ruleset/nintendo.mrs
+    path-in-bundle: geo/geosite/nintendo.mrs
+  tiktok:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/tiktok.mrs
+    path: ./ruleset/tiktok.mrs
+    path-in-bundle: geo/geosite/tiktok.mrs
+  tiktok_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/tiktok.mrs
+    path: ./ruleset/tiktok_ip.mrs
+    path-in-bundle: geo/geoip/tiktok.mrs
+  twitter:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/twitter.mrs
+    path: ./ruleset/twitter.mrs
+    path-in-bundle: geo/geosite/twitter.mrs
+  twitter_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/twitter.mrs
+    path: ./ruleset/twitter_ip.mrs
+    path-in-bundle: geo/geoip/twitter.mrs
+  meta:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/meta.mrs
+    path: ./ruleset/meta.mrs
+    path-in-bundle: geo/geosite/meta.mrs
+  facebook_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/facebook.mrs
+    path: ./ruleset/facebook_ip.mrs
+    path-in-bundle: geo/geoip/facebook.mrs
+  line:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/line.mrs
+    path: ./ruleset/line.mrs
+    path-in-bundle: geo/geosite/line.mrs
+  netflix:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/netflix.mrs
+    path: ./ruleset/netflix.mrs
+    path-in-bundle: geo/geosite/netflix.mrs
+  netflix_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/netflix.mrs
+    path: ./ruleset/netflix_ip.mrs
+    path-in-bundle: geo/geoip/netflix.mrs
+  emby:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/666OS/rules@release/mihomo/domain/Emby.mrs
+    path: ./ruleset/emby.mrs
+    path-in-bundle: geo/geosite/category-emby.mrs
+  emos:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/binaryu/emos-proxy-rule@main/rules/emos-mihomo.mrs
+    path: ./ruleset/emos.mrs
+    path-in-bundle: geo/geosite/category-emby.mrs
+  bilibili:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/bilibili.mrs
+    path: ./ruleset/bilibili.mrs
+    path-in-bundle: geo/geosite/bilibili.mrs
+  pikpak:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/pikpak.mrs
+    path: ./ruleset/pikpak.mrs
+    path-in-bundle: geo/geosite/pikpak.mrs
+  spotify:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/spotify.mrs
+    path: ./ruleset/spotify.mrs
+    path-in-bundle: geo/geosite/spotify.mrs
+  spotify_ip:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: ipcidr
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geoip/spotify.mrs
+    path: ./ruleset/spotify_ip.mrs
+    path-in-bundle: geo/geoip/spotify.mrs
+  cryptocurrency:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/category-cryptocurrency.mrs
+    path: ./ruleset/cryptocurrency.mrs
+    path-in-bundle: geo/geosite/category-cryptocurrency.mrs
+  paypal:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/paypal.mrs
+    path: ./ruleset/paypal.mrs
+    path-in-bundle: geo/geosite/paypal.mrs
+  patreon:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/patreon.mrs
+    path: ./ruleset/patreon.mrs
+    path-in-bundle: geo/geosite/patreon.mrs
+  ehentai:
+    type: http
+    format: mrs
+    interval: 86400
+    behavior: domain
+    url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/ehentai.mrs
+    path: ./ruleset/ehentai.mrs
+    path-in-bundle: geo/geosite/ehentai.mrs
+rules:
+  - DOMAIN,cdn.jsdmirror.com,直连
+  - RULE-SET,private,直连
+  - RULE-SET,bilibili,Bilibili
+  - RULE-SET,geolocation-cn,直连
+  - RULE-SET,games_cn,直连
+  - RULE-SET,epicgames,直连
+  - RULE-SET,nvidia_cn,直连
+  - RULE-SET,apple_cn,直连
+  - RULE-SET,microsoft_cn,直连
+  - DOMAIN,fsend.cn,直连
+  - DOMAIN,international-gfe.download.nvidia.com,直连
+  - AND,((NETWORK,UDP),(DST-PORT,443),(NOT,((OR,((RULE-SET,cn_additional),(RULE-SET,cn_ip,no-resolve)))))),REJECT
+  - RULE-SET,category-ads,AdBlock
+  - RULE-SET,googlefcm,FCM
+  - RULE-SET,youtube,YouTube
+  - RULE-SET,google,Google
+  - RULE-SET,google_ip,Google,no-resolve
+  - RULE-SET,ai,AI
+  - RULE-SET,github,默认代理
+  - RULE-SET,microsoft,Microsoft
+  - RULE-SET,microsoft_ip,Microsoft,no-resolve
+  - RULE-SET,apple,Apple
+  - RULE-SET,apple_ip,Apple,no-resolve
+  - RULE-SET,telegram,Telegram
+  - RULE-SET,telegram_ip,Telegram,no-resolve
+  - RULE-SET,steam,Steam
+  - RULE-SET,steam_ip,Steam,no-resolve
+  - RULE-SET,nintendo,Nintendo
+  - DOMAIN-SUFFIX,nintendo.com,Nintendo
+  - DOMAIN-SUFFIX,nintendo.net,Nintendo
+  - DOMAIN-SUFFIX,nintendowifi.net,Nintendo
+  - DOMAIN-SUFFIX,nintendo.co.jp,Nintendo
+  - DOMAIN-SUFFIX,nintendo.co.uk,Nintendo
+  - DOMAIN-SUFFIX,nintendo-europe.com,Nintendo
+  - DOMAIN-SUFFIX,nintendo.com.hk,Nintendo
+  - DOMAIN-SUFFIX,nintendo.com.tw,Nintendo
+  - DOMAIN-SUFFIX,nintendo.co.kr,Nintendo
+  - DOMAIN-SUFFIX,nintendo.com.au,Nintendo
+  - DOMAIN-SUFFIX,nintendo.co.nz,Nintendo
+  - DOMAIN-SUFFIX,nintendoswitch.com,Nintendo
+  - DOMAIN-SUFFIX,nintendo-switch-online.com,Nintendo
+  - DOMAIN-SUFFIX,nintendocdn.com,Nintendo
+  - DOMAIN-SUFFIX,nintendojpn.com,Nintendo
+  - RULE-SET,tiktok,TikTok
+  - RULE-SET,tiktok_ip,TikTok,no-resolve
+  - RULE-SET,twitter,Twitter
+  - RULE-SET,twitter_ip,Twitter,no-resolve
+  - RULE-SET,meta,Meta
+  - RULE-SET,facebook_ip,Meta,no-resolve
+  - RULE-SET,line,Line
+  - RULE-SET,netflix,Netflix
+  - RULE-SET,netflix_ip,Netflix,no-resolve
+  - DOMAIN-SUFFIX,10086.cn,直连
+  - DOMAIN-SUFFIX,13.yusen.cyou,直连
+  - DOMAIN-SUFFIX,139.com,直连
+  - DOMAIN-SUFFIX,2l.585820.xyz,直连
+  - DOMAIN-SUFFIX,5165163.xyz,直连
+  - DOMAIN-SUFFIX,a.huachu.xyz,直连
+  - DOMAIN-SUFFIX,aiyun.origamiart.uk,直连
+  - DOMAIN-SUFFIX,b.huachu.xyz,直连
+  - DOMAIN-SUFFIX,c.huachu.xyz,直连
+  - DOMAIN-SUFFIX,ca1.misaka.si,直连
+  - DOMAIN-SUFFIX,cdn.irisnb.com,直连
+  - DOMAIN-SUFFIX,cdn.zhezhi.art,直连
+  - DOMAIN-SUFFIX,cf.sfcj.org,直连
+  - DOMAIN-SUFFIX,cm.speedtest.sarl,直连
+  - DOMAIN-SUFFIX,cmecloud.cn,直连
+  - DOMAIN-SUFFIX,cn.mlhyy.top,直连
+  - DOMAIN-SUFFIX,ct.speedtest.sarl,直连
+  - DOMAIN-SUFFIX,cu.speedtest.sarl,直连
+  - DOMAIN-SUFFIX,de.origamiart.uk,直连
+  - DOMAIN-SUFFIX,dmit.origmiart.uk,直连
+  - DOMAIN-SUFFIX,dmit2.origamiart.uk,直连
+  - DOMAIN-SUFFIX,ea.eoos.top,直连
+  - DOMAIN-SUFFIX,eb.atrct.cn,直连
+  - DOMAIN-SUFFIX,em.mlhyy.top,直连
+  - DOMAIN-SUFFIX,emby.bbqwq.com,直连
+  - DOMAIN-SUFFIX,emby.di0.uk,直连
+  - DOMAIN-SUFFIX,emby.huangmin.cc.cd,直连
+  - DOMAIN-SUFFIX,emby.misaka.si,直连
+  - DOMAIN-SUFFIX,emby.my,直连
+  - DOMAIN-SUFFIX,emby.taotu.ink,直连
+  - DOMAIN-SUFFIX,emby.wawajiao.cc.cd,直连
+  - DOMAIN-SUFFIX,emby.yecaodi.xyz,直连
+  - DOMAIN-SUFFIX,emby.yusen.cc.cd,直连
+  - DOMAIN-SUFFIX,emby.z1000.cc.cd,直连
+  - DOMAIN-SUFFIX,emby2.huangmin.cc.cd,直连
+  - DOMAIN-SUFFIX,feimu.tv,直连
+  - DOMAIN-SUFFIX,gcf.betop.uk,直连
+  - DOMAIN-SUFFIX,gd.thesteiff.uk,直连
+  - DOMAIN-SUFFIX,gf.emby.yun,直连
+  - DOMAIN-SUFFIX,goemby.entertang.work,直连
+  - DOMAIN-SUFFIX,hhhk.origmiart.uk,直连
+  - DOMAIN-SUFFIX,iris.niceduck.lol,直连
+  - DOMAIN-SUFFIX,iris.pvq.cc,直连
+  - DOMAIN-SUFFIX,iris520.vip,直连
+  - DOMAIN-SUFFIX,irisyyds.top,直连
+  - DOMAIN-SUFFIX,isif.origmiart.uk,直连
+  - DOMAIN-SUFFIX,link00.okemby.org,直连
+  - DOMAIN-SUFFIX,link01.okemby.org,直连
+  - DOMAIN-SUFFIX,lunarisvault.com,直连
+  - DOMAIN-SUFFIX,mwyy.abharuto.online,直连
+  - DOMAIN-SUFFIX,mwyy.junyue.store,直连
+  - DOMAIN-SUFFIX,mwyy.woofle.space,直连
+  - DOMAIN-SUFFIX,nay.007.us.kg,直连
+  - DOMAIN-SUFFIX,nc1.misaka.si,直连
+  - DOMAIN-SUFFIX,od.emby.fan,直连
+  - DOMAIN-SUFFIX,od.emby.yun,直连
+  - DOMAIN-SUFFIX,onatoshi.114514.quest,直连
+  - DOMAIN-SUFFIX,one.liminalnet.com,直连
+  - DOMAIN-SUFFIX,plusde1.younoyes.com,直连
+  - DOMAIN-SUFFIX,plushk1.younoyes.com,直连
+  - DOMAIN-SUFFIX,plushk2.younoyes.com,直连
+  - DOMAIN-SUFFIX,plusjp1.younoyes.com,直连
+  - DOMAIN-SUFFIX,plusus1.younoyes.com,直连
+  - DOMAIN-SUFFIX,plusus2.younoyes.com,直连
+  - DOMAIN-SUFFIX,plusus3.younoyes.com,直连
+  - DOMAIN-SUFFIX,q8dg.65194798.xyz,直连
+  - DOMAIN-SUFFIX,saodu6.cn,直连
+  - DOMAIN-SUFFIX,saodu6.top,直连
+  - DOMAIN-SUFFIX,sg.gxwplay.com,直连
+  - DOMAIN-SUFFIX,sjc.origamiart.uk,直连
+  - DOMAIN-SUFFIX,sjc.origmiart.uk,直连
+  - DOMAIN-SUFFIX,st.stluma.com,直连
+  - DOMAIN-SUFFIX,stop.shayuemby.top,直连
+  - DOMAIN-SUFFIX,su.stluma.com,直连
+  - DOMAIN-SUFFIX,test.inemby.us.ci,直连
+  - DOMAIN-SUFFIX,us4837.origmiart.uk,直连
+  - DOMAIN-SUFFIX,video.emos.best,直连
+  - DOMAIN-SUFFIX,wcf.3msky.com,直连
+  - DOMAIN-SUFFIX,www.525778.xyz,直连
+  - DOMAIN-SUFFIX,yalao.7890888.xyz,直连
+  - DOMAIN-SUFFIX,yx.emby-cu.ccwu.cc,直连
+  - DOMAIN-SUFFIX,yy.eoos.lol,直连
+  - DOMAIN-SUFFIX,ztljm.cc.cd,直连
+  - DOMAIN-SUFFIX,zxngw-direct.gxwplay.top,直连
+  - RULE-SET,emby,Emby
+  - RULE-SET,emos,Emby
+  - DOMAIN-SUFFIX,mb3admin.com,Emby
+  - DOMAIN-SUFFIX,nubebelle.com,Emby
+  - DOMAIN-SUFFIX,cu-gd.mwyy.de,直连
+  - DOMAIN-SUFFIX,ct-gd.mwyy.de,直连
+  - DOMAIN-SUFFIX,cm-gd.mwyy.de,直连
+  - DOMAIN-SUFFIX,younoyes.com,直连
+  - DOMAIN-SUFFIX,embycc.wybcs.work,直连
+  - DOMAIN-SUFFIX,yd.7890888.xyz,直连
+  - DOMAIN-SUFFIX,189.7890888.xyz,直连
+  - DOMAIN-SUFFIX,lizi.xiaoheixh.de,直连
+  - DOMAIN-SUFFIX,liuer.linkpc.net,直连
+  - DOMAIN-SUFFIX,emos.200038.xyz,直连
+  - DOMAIN-SUFFIX,xgayczz.xiaoheixh.de,直连
+  - DOMAIN-SUFFIX,std.cn2gias.uk,直连
+  - DOMAIN-SUFFIX,s2.array2026.cc,直连
+  - DOMAIN-SUFFIX,s3.array2026.com,直连
+  - DOMAIN-SUFFIX,gd.maoy.de,直连
+  - DOMAIN-SUFFIX,yd.maoy.de,直连
+  - DOMAIN-SUFFIX,cdn.eoos.top,直连
+  - DOMAIN-SUFFIX,cf.eoos.top,直连
+  - DOMAIN-SUFFIX,eoos.lol,直连
+  - DOMAIN-SUFFIX,hk.origamiart.uk,直连
+  - DOMAIN-SUFFIX,emby.zhongmo.kdns.fr,Emby
+  - DOMAIN-SUFFIX,zzxx.origamiart.uk,Emby
+  - DOMAIN-SUFFIX,emos.xunye8.dpdns.org,Emby
+  - DOMAIN-SUFFIX,stream-1.sadchicktv.com,Emby
+  - DOMAIN-SUFFIX,emby.sadchicktv.com,Emby
+  - DOMAIN-SUFFIX,emby101.origamiart.uk,Emby
+  - DOMAIN-SUFFIX,p3mc4.mobaiemby.site,Emby
+  - DOMAIN-SUFFIX,emby.levilde.bond,Emby
+  - DOMAIN-SUFFIX,emby.sl.a,Emby
+  - DOMAIN-SUFFIX,cf.imetyou.top,Emby
+  - DOMAIN-SUFFIX,tv.ash.yt,Emby
+  - DOMAIN-SUFFIX,ask.ash.yt,Emby
+  - DOMAIN-SUFFIX,xying1314.xyz,Emby
+  - DOMAIN-SUFFIX,v.chilledmelon.com,Emby
+  - DOMAIN-SUFFIX,lite.cn2gias.uk,Emby
+  - DOMAIN-SUFFIX,emby.teawaya.com,Emby
+  - DOMAIN-SUFFIX,emby.chapanda.site,Emby
+  - DOMAIN-SUFFIX,auto.dqx99999.shop,Emby
+  - DOMAIN-KEYWORD,emby,Emby
+  - PROCESS-NAME,com.mb.android,Emby
+  - PROCESS-NAME,tv.emby.embyatv,Emby
+  - PROCESS-NAME,com.hush.yamby,Emby
+  - PROCESS-NAME,com.jellycine.app,Emby
+  - PROCESS-NAME,com.mountains.hills,Emby
+  - PROCESS-NAME,RodelPlayer.App.exe,Emby
+  - PROCESS-NAME,com.feifeiduck.capyplayer,Emby
+  - RULE-SET,pikpak,PikPak
+  - RULE-SET,spotify,Spotify
+  - RULE-SET,spotify_ip,Spotify,no-resolve
+  - RULE-SET,cryptocurrency,Crypto
+  - RULE-SET,paypal,PayPal
+  - RULE-SET,patreon,Patreon
+  - RULE-SET,ehentai,EHentai
+  - RULE-SET,geolocation-!cn,默认代理
+  - RULE-SET,cn_ip,直连
+  - RULE-SET,private_ip,直连
+  - MATCH,漏网之鱼
