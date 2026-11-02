@@ -790,7 +790,11 @@ const serviceConfigs = [
       'DOMAIN-SUFFIX,cf.eoos.top,直连',
       'DOMAIN-SUFFIX,eoos.lol,直连',
       'DOMAIN-SUFFIX,hk.origamiart.uk,直连',
+      'DOMAIN-SUFFIX,zy.kingemby.com,直连',
+      'DOMAIN-SUFFIX,fd1.kingemby.xyz/fd,直连',
+      'DOMAIN-SUFFIX,gz.kingmedia.cc.cd,直连',
        // 自建/常用 Emby 访问地址 - 代理
+      'DOMAIN-SUFFIX,movie.kingemby.com,Emby',
       'DOMAIN-SUFFIX,emby.zhongmo.kdns.fr,Emby',
       'DOMAIN-SUFFIX,zzxx.origamiart.uk,Emby',
       'DOMAIN-SUFFIX,emos.xunye8.dpdns.org,Emby',
