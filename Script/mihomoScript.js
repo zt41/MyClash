@@ -793,6 +793,9 @@ const serviceConfigs = [
       'DOMAIN-SUFFIX,zy.kingemby.com,直连',
       'DOMAIN-SUFFIX,fd1.kingemby.xyz/fd,直连',
       'DOMAIN-SUFFIX,gz.kingmedia.cc.cd,直连',
+      'DOMAIN-SUFFIX,dx.stieff.uk,直连'
+      'DOMAIN-SUFFIX,cscs.stieff.uk,直连'
+
        // 自建/常用 Emby 访问地址 - 代理
       'DOMAIN-SUFFIX,movie.kingemby.com,Emby',
       'DOMAIN-SUFFIX,emby.zhongmo.kdns.fr,Emby',
