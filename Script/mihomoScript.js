@@ -797,6 +797,7 @@ const serviceConfigs = [
       'DOMAIN-SUFFIX,cscs.stieff.uk,直连'
 
        // 自建/常用 Emby 访问地址 - 代理
+      'DOMAIN-SUFFIX,mi.miraiemby.com,Emby',
       'DOMAIN-SUFFIX,movie.kingemby.com,Emby',
       'DOMAIN-SUFFIX,emby.zhongmo.kdns.fr,Emby',
       'DOMAIN-SUFFIX,zzxx.origamiart.uk,Emby',
