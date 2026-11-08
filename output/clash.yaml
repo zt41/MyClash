@@ -1206,6 +1206,13 @@ rule-providers:
     url: https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/geosite/private.mrs
     path: ./ruleset/private.mrs
     path-in-bundle: geo/geosite/private.mrs
+  pcdn_block:
+    type: http
+    format: text
+    behavior: classical
+    interval: 86400
+    url: https://raw.githubusercontent.com/zt41/surge.config/main/PCDN-Block.list
+    path: ./ruleset/pcdn-block.list
   private_ip:
     type: http
     format: mrs
@@ -1591,7 +1598,11 @@ rule-providers:
     path: ./ruleset/ehentai.mrs
     path-in-bundle: geo/geosite/ehentai.mrs
 rules:
+  - DOMAIN,zofgk.duckdns.org,DIRECT
+  - DOMAIN,192.236.226.182.sslip.io,DIRECT
+  - IP-CIDR,192.236.226.182/32,DIRECT,no-resolve
   - DOMAIN,cdn.jsdmirror.com,直连
+  - RULE-SET,pcdn_block,REJECT
   - RULE-SET,private,直连
   - RULE-SET,bilibili,Bilibili
   - RULE-SET,geolocation-cn,直连
@@ -1754,6 +1765,9 @@ rules:
   - DOMAIN-SUFFIX,zy.kingemby.com,直连
   - DOMAIN-SUFFIX,fd1.kingemby.xyz/fd,直连
   - DOMAIN-SUFFIX,gz.kingmedia.cc.cd,直连
+  - DOMAIN-SUFFIX,dx.stieff.uk,直连
+  - DOMAIN-SUFFIX,cscs.stieff.uk,直连
+  - DOMAIN-SUFFIX,mi.miraiemby.com,Emby
   - DOMAIN-SUFFIX,movie.kingemby.com,Emby
   - DOMAIN-SUFFIX,emby.zhongmo.kdns.fr,Emby
   - DOMAIN-SUFFIX,zzxx.origamiart.uk,Emby
