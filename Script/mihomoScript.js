@@ -67,6 +67,9 @@ const prefixRules = [
   // 规则集下载域名，避免出现鸡蛋问题（规则集本身走 jsdmirror CDN，若被代理到国外节点可能拉取失败）
   'DOMAIN,cdn.jsdmirror.com,直连',
 
+  // PCDN拦截（名单源自 DuoJLa/PCDN-Block，清洗版托管于 zt41/surge.config 每日同步，远程更新）
+  'RULE-SET,pcdn_block,REJECT',
+
   // 私有网络直连
   'RULE-SET,private,直连',
 
@@ -230,6 +233,14 @@ const baseRuleProviders = {
     url: `${ruleSetBaseUrl}geosite/private.mrs`,
     path: './ruleset/private.mrs',
     'path-in-bundle': 'geo/geosite/private.mrs',
+  },
+  pcdn_block: {
+    type: 'http',
+    format: 'text',
+    behavior: 'classical',
+    interval: 86400,
+    url: 'https://raw.githubusercontent.com/zt41/surge.config/main/PCDN-Block.list',
+    path: './ruleset/pcdn-block.list',
   },
   private_ip: {
     ...ruleProviderCommonIpcidr,
@@ -793,8 +804,8 @@ const serviceConfigs = [
       'DOMAIN-SUFFIX,zy.kingemby.com,直连',
       'DOMAIN-SUFFIX,fd1.kingemby.xyz/fd,直连',
       'DOMAIN-SUFFIX,gz.kingmedia.cc.cd,直连',
-      'DOMAIN-SUFFIX,dx.stieff.uk,直连'
-      'DOMAIN-SUFFIX,cscs.stieff.uk,直连'
+      'DOMAIN-SUFFIX,dx.stieff.uk,直连',
+      'DOMAIN-SUFFIX,cscs.stieff.uk,直连',
 
        // 自建/常用 Emby 访问地址 - 代理
       'DOMAIN-SUFFIX,mi.miraiemby.com,Emby',
