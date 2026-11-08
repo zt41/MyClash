@@ -64,6 +64,11 @@ const ruleOptionsEnable = {
 
 // 定义前置规则
 const prefixRules = [
+  // Komari 面板直连（面板流量不经节点）
+  'DOMAIN,zofgk.duckdns.org,DIRECT',
+  'DOMAIN,192.236.226.182.sslip.io,DIRECT',
+  'IP-CIDR,192.236.226.182/32,DIRECT,no-resolve',
+
   // 规则集下载域名，避免出现鸡蛋问题（规则集本身走 jsdmirror CDN，若被代理到国外节点可能拉取失败）
   'DOMAIN,cdn.jsdmirror.com,直连',
 
