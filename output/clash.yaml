@@ -79,7 +79,7 @@ ntp:
   interval: 60
 tun:
   enable: true
-  stack: mips
+  stack: mixed
   auto-route: true
   strict-route: true
   auto-redirect: true
