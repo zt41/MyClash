@@ -753,6 +753,7 @@ const serviceConfigs = [
       'DOMAIN-SUFFIX,mwyy.abharuto.online,直连',
       'DOMAIN-SUFFIX,mwyy.junyue.store,直连',
       'DOMAIN-SUFFIX,mwyy.woofle.space,直连',
+      'DOMAIN-SUFFIX,mwyy.hetao.chat,直连',
       'DOMAIN-SUFFIX,nay.007.us.kg,直连',
       'DOMAIN-SUFFIX,nc1.misaka.si,直连',
       'DOMAIN-SUFFIX,od.emby.fan,直连',
