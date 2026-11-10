@@ -1603,6 +1603,7 @@ rules:
   - IP-CIDR,192.236.226.182/32,DIRECT,no-resolve
   - DOMAIN,cdn.jsdmirror.com,直连
   - RULE-SET,pcdn_block,REJECT
+  - DOMAIN-SUFFIX,muse.ai,AI
   - RULE-SET,private,直连
   - RULE-SET,bilibili,Bilibili
   - RULE-SET,geolocation-cn,直连
