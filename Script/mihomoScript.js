@@ -75,6 +75,9 @@ const prefixRules = [
   // PCDN拦截（名单源自 DuoJLa/PCDN-Block，清洗版托管于 zt41/surge.config 每日同步，远程更新）
   'RULE-SET,pcdn_block,REJECT',
 
+  // Muse 分流（走 AI 策略组）
+  'DOMAIN-SUFFIX,muse.ai,AI',
+
   // 私有网络直连
   'RULE-SET,private,直连',
 
