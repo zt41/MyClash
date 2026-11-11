@@ -153,10 +153,11 @@ const directProxies = [
 ];
 
 // 图标 URL 公共前缀
-// 策略组图标地址，图标文件存放在本仓库 Icons/ 目录下（自托管，不依赖上游仓库）
-// 走 jsDelivr CDN；若 jsdmirror 已完成同步，可改为：https://cdn.jsdmirror.com/gh/zt41/MyClash@main/Icons/svg/
-// 如需用上游图标，改为：https://cdn.jsdmirror.com/gh/AIsouler/MyClash@main/Icons/svg/
-const iconBaseUrl = 'https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/';
+// 策略组图标库：aaANDkk/Qure_Style_SVG（走 jsDelivr CDN）
+// 通用图标在 icon/svg/common/，国旗图标在 icon/svg/flag/（iconFlagBaseUrl）
+// 例外：Nintendo 组仍用本仓库 Icons/png/Nintendo.png（用户自备图）
+const iconBaseUrl = 'https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/';
+const iconFlagBaseUrl = 'https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/flag/';
 
 // 规则集 URL 公共前缀
 const ruleSetBaseUrl = 'https://cdn.jsdmirror.com/gh/appshubcc/bett-rules@meta/geo/';
@@ -167,32 +168,32 @@ const regionDefinitions = [
     name: '香港',
     flag: '🇭🇰',
     regex: /🇭🇰|香港|(?<![A-Za-z])HKG?(?![A-Za-z])|hong\s*kong/i,
-    icon: `${iconBaseUrl}HongKong.svg`,
+    icon: `${iconFlagBaseUrl}Hong_Kong.svg`,
   },
   {
     name: '日本',
     flag: '🇯🇵',
     regex: /🇯🇵|日本|东京|大阪|京都|(?<![A-Za-z])JPN?(?![A-Za-z])|japan/i,
-    icon: `${iconBaseUrl}Japan.svg`,
+    icon: `${iconFlagBaseUrl}Japan.svg`,
   },
   {
     name: '美国',
     flag: '🇺🇸',
     regex:
       /🇺🇸|美国|纽约|洛杉矶|旧金山|芝加哥|休斯顿|迈阿密|西雅图|波士顿|华盛顿|拉斯维加斯|圣何塞|圣地亚哥|(?<![A-Za-z])USA?(?![A-Za-z])|america|united\s*states/i,
-    icon: `${iconBaseUrl}America.svg`,
+    icon: `${iconFlagBaseUrl}United_States.svg`,
   },
   {
     name: '新加坡',
     flag: '🇸🇬',
     regex: /🇸🇬|新加坡|狮城|(?<![A-Za-z])SGP?(?![A-Za-z])|singapore/i,
-    icon: `${iconBaseUrl}Singapore.svg`,
+    icon: `${iconFlagBaseUrl}Singapore.svg`,
   },
   {
     name: '台湾',
     flag: '🇹🇼',
     regex: /🇹🇼|台湾|台北|高雄|(?<![A-Za-z])TWN?(?![A-Za-z])|taiwan/i,
-    icon: `${iconBaseUrl}Taiwan.svg`,
+    icon: `${iconFlagBaseUrl}China_Taiwan.svg`,
   },
 ];
 
@@ -410,7 +411,7 @@ const serviceConfigs = [
         'path-in-bundle': 'geo/geosite/googlefcm.mrs',
       },
     },
-    icon: `${iconBaseUrl}Fcm.svg`,
+    icon: `${iconBaseUrl}FCM.svg`,
     rules: ['RULE-SET,googlefcm,FCM'],
   },
   {
@@ -459,7 +460,7 @@ const serviceConfigs = [
         'path-in-bundle': 'geo/geosite/category-ai-!cn.mrs',
       },
     },
-    icon: `${iconBaseUrl}OpenAI.svg`,
+    icon: `${iconBaseUrl}ChatGPT.svg`,
     rules: ['RULE-SET,ai,AI'],
   },
   {
@@ -1338,7 +1339,7 @@ function buildFunctionalGroups(filteredProxies, generatedRegionGroups, customize
       ...selectBaseOption,
       name: '直连',
       proxies: [...directProxies.map((p) => p.name)],
-      icon: `${iconBaseUrl}China.svg`,
+      icon: `${iconFlagBaseUrl}China.svg`,
       hidden: true,
     };
     const globalGroup = {
@@ -1417,7 +1418,7 @@ function buildFunctionalGroups(filteredProxies, generatedRegionGroups, customize
     ...selectBaseOption,
     name: '直连',
     proxies: [...directProxies.map((p) => p.name)],
-    icon: `${iconBaseUrl}China.svg`,
+    icon: `${iconFlagBaseUrl}China.svg`,
     hidden: hideManualSelectGroupEnabled,
   };
 
