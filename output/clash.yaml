@@ -1732,6 +1732,67 @@ rules:
   - DOMAIN-SUFFIX,su.stluma.com,直连
   - DOMAIN-SUFFIX,test.inemby.us.ci,直连
   - DOMAIN-SUFFIX,us4837.origmiart.uk,直连
+  - DOMAIN-SUFFIX,adkwai.com,直连
+  - DOMAIN-SUFFIX,adukwai.com,直连
+  - DOMAIN-SUFFIX,eckwai.com,直连
+  - DOMAIN-SUFFIX,gifshow.com,直连
+  - DOMAIN-SUFFIX,gskwai.com,直连
+  - DOMAIN-SUFFIX,inkwai.com,直连
+  - DOMAIN-SUFFIX,ksapisrv.com,直连
+  - DOMAIN-SUFFIX,kskwai.com,直连
+  - DOMAIN-SUFFIX,kspkg.com,直连
+  - DOMAIN-SUFFIX,kstv.com,直连
+  - DOMAIN-SUFFIX,ksurl.cn,直连
+  - DOMAIN-SUFFIX,kuaiads.cn,直连
+  - DOMAIN-SUFFIX,kuaiads.com,直连
+  - DOMAIN-SUFFIX,kuaiapps.com,直连
+  - DOMAIN-SUFFIX,kuaishou.cn,直连
+  - DOMAIN-SUFFIX,kuaishou.com,直连
+  - DOMAIN-SUFFIX,kuaishouapp.cn,直连
+  - DOMAIN-SUFFIX,kuaishouapp.com,直连
+  - DOMAIN-SUFFIX,kuaishouapp.net,直连
+  - DOMAIN-SUFFIX,kuaishouapps.com,直连
+  - DOMAIN-SUFFIX,kuaishougroup.com,直连
+  - DOMAIN-SUFFIX,kuaishoupay.com,直连
+  - DOMAIN-SUFFIX,kuaishouzt.cn,直连
+  - DOMAIN-SUFFIX,kuaishouzt.com,直连
+  - DOMAIN-SUFFIX,kwai-group.com,直连
+  - DOMAIN-SUFFIX,kwai-pro.com,直连
+  - DOMAIN-SUFFIX,kwai.com,直连
+  - DOMAIN-SUFFIX,kwai.net,直连
+  - DOMAIN-SUFFIX,kwai.xyz,直连
+  - DOMAIN-SUFFIX,kwaiad.cn,直连
+  - DOMAIN-SUFFIX,kwaiadapp.cn,直连
+  - DOMAIN-SUFFIX,kwaiadapp.com,直连
+  - DOMAIN-SUFFIX,kwaiads.cn,直连
+  - DOMAIN-SUFFIX,kwaiads.com,直连
+  - DOMAIN-SUFFIX,kwaibusiness.cn,直连
+  - DOMAIN-SUFFIX,kwaibusiness.com,直连
+  - DOMAIN-SUFFIX,kwaicdn.com,直连
+  - DOMAIN-SUFFIX,kwaicdnx.com,直连
+  - DOMAIN-SUFFIX,kwaigroup.com,直连
+  - DOMAIN-SUFFIX,kwailai.cn,直连
+  - DOMAIN-SUFFIX,kwailai.com,直连
+  - DOMAIN-SUFFIX,kwailala.cn,直连
+  - DOMAIN-SUFFIX,kwailala.com,直连
+  - DOMAIN-SUFFIX,kwailine.com,直连
+  - DOMAIN-SUFFIX,kwaishou.cn,直连
+  - DOMAIN-SUFFIX,kwaishouapp.cn,直连
+  - DOMAIN-SUFFIX,kwaishouapp.com,直连
+  - DOMAIN-SUFFIX,kwaishouapp.net,直连
+  - DOMAIN-SUFFIX,kwaitalk.cn,直连
+  - DOMAIN-SUFFIX,kwaitalk.com,直连
+  - DOMAIN-SUFFIX,kwaitv.cn,直连
+  - DOMAIN-SUFFIX,kwaitv.com,直连
+  - DOMAIN-SUFFIX,kwaiying.cn,直连
+  - DOMAIN-SUFFIX,kwaiying.com,直连
+  - DOMAIN-SUFFIX,kwaizt.cn,直连
+  - DOMAIN-SUFFIX,kwaizt.com,直连
+  - DOMAIN-SUFFIX,kwimgs.com,直连
+  - DOMAIN-SUFFIX,kwaixiaodian.com,直连
+  - DOMAIN-SUFFIX,oskwai.com,直连
+  - DOMAIN-SUFFIX,oskwai.net,直连
+  - DOMAIN-SUFFIX,yximgs.com,直连
   - DOMAIN-SUFFIX,video.emos.best,直连
   - DOMAIN-SUFFIX,wcf.3msky.com,直连
   - DOMAIN-SUFFIX,www.525778.xyz,直连
