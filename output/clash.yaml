@@ -481,7 +481,7 @@ proxy-groups:
       - 台湾
       - 其他节点-自动选择
       - 其他节点
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Global.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Global.svg
   - interval: 600
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
@@ -498,14 +498,14 @@ proxy-groups:
       - 手动选择
       - 自动选择
       - 负载均衡
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Proxy.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Proxy.svg
   - interval: 600
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
     type: select
     name: 手动选择
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Static.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Static.svg
     proxies:
       - 🇯🇵 日本•移联01
       - 🇯🇵 日本•移联02
@@ -535,7 +535,7 @@ proxy-groups:
     lazy: true
     type: url-test
     tolerance: 50
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Auto.svg
     name: 自动选择
     proxies:
       - 🇯🇵 日本•移联01
@@ -566,7 +566,7 @@ proxy-groups:
     lazy: true
     type: load-balance
     strategy: round-robin
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/RoundRobin.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/RoundRobin.svg
     name: 负载均衡
     proxies:
       - 🇯🇵 日本•移联01
@@ -597,7 +597,7 @@ proxy-groups:
     lazy: true
     type: select
     name: FCM
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Fcm.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/FCM.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -617,7 +617,7 @@ proxy-groups:
     lazy: true
     type: select
     name: YouTube
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/YouTube.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/YouTube.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -635,7 +635,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Google
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Google.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Google.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -653,7 +653,7 @@ proxy-groups:
     lazy: true
     type: select
     name: AI
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/OpenAI.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/ChatGPT.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -672,7 +672,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Microsoft
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Microsoft.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Microsoft.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -691,7 +691,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Apple
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Apple.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Apple.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -710,7 +710,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Telegram
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Telegram.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Telegram.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -728,7 +728,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Steam
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Steam.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Steam.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -766,7 +766,7 @@ proxy-groups:
     lazy: true
     type: select
     name: TikTok
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/TikTok.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/TikTok.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -785,7 +785,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Twitter
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Twitter.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Twitter.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -803,7 +803,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Meta
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Meta.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Meta.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -821,7 +821,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Line
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Line.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Line.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -839,7 +839,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Netflix
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Netflix.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Netflix.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -857,7 +857,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Emby
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Emby.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Emby.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -876,7 +876,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Bilibili
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Bilibili.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Bilibili.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -896,7 +896,7 @@ proxy-groups:
     lazy: true
     type: select
     name: PikPak
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/PikPak.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/PikPak.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -915,7 +915,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Spotify
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Spotify.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Spotify.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -934,7 +934,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Crypto
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Bitcoin.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Bitcoin.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -953,7 +953,7 @@ proxy-groups:
     lazy: true
     type: select
     name: PayPal
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/PayPal.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/PayPal.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -972,7 +972,7 @@ proxy-groups:
     lazy: true
     type: select
     name: Patreon
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Patreon.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Patreon.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -991,7 +991,7 @@ proxy-groups:
     lazy: true
     type: select
     name: EHentai
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/EHentai.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/EHentai.svg
     proxies:
       - 默认代理
       - 手动选择
@@ -1011,7 +1011,7 @@ proxy-groups:
     lazy: true
     type: select
     name: AdBlock
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/AdBlock.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/AdBlock.svg
     proxies:
       - REJECT
       - REJECT-DROP
@@ -1031,7 +1031,7 @@ proxy-groups:
       - 新加坡
       - 台湾
       - 其他节点
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Stack.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Stack.svg
   - interval: 600
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
@@ -1044,14 +1044,14 @@ proxy-groups:
       - 🇨🇳 直连 | IPv6优先
       - 🇨🇳 直连 | 仅IPv4
       - 🇨🇳 直连 | 仅IPv6
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/China.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/flag/China.svg
   - interval: 600
     timeout: 3000
     url: https://www.apple.com/library/test/success.html
     lazy: true
     type: url-test
     tolerance: 50
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Auto.svg
     name: 香港-自动选择
     proxies:
       - 🇭🇰 香港•移联01
@@ -1064,7 +1064,7 @@ proxy-groups:
     lazy: true
     type: select
     name: 香港
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/HongKong.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/flag/Hong_Kong.svg
     proxies:
       - 🇭🇰 香港•移联01
       - 🇭🇰 香港•移联02
@@ -1077,7 +1077,7 @@ proxy-groups:
     lazy: true
     type: url-test
     tolerance: 50
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Auto.svg
     name: 日本-自动选择
     proxies:
       - 🇯🇵 日本•移联01
@@ -1090,7 +1090,7 @@ proxy-groups:
     lazy: true
     type: select
     name: 日本
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Japan.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/flag/Japan.svg
     proxies:
       - 🇯🇵 日本•移联01
       - 🇯🇵 日本•移联02
@@ -1103,7 +1103,7 @@ proxy-groups:
     lazy: true
     type: url-test
     tolerance: 50
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Auto.svg
     name: 美国-自动选择
     proxies:
       - 🇺🇸 美国•移联01
@@ -1114,7 +1114,7 @@ proxy-groups:
     lazy: true
     type: select
     name: 美国
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/America.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/flag/United_States.svg
     proxies:
       - 🇺🇸 美国•移联01
       - 🇺🇸 美国•电信01
@@ -1125,7 +1125,7 @@ proxy-groups:
     lazy: true
     type: url-test
     tolerance: 50
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Auto.svg
     name: 新加坡-自动选择
     proxies:
       - 🇸🇬 新加坡•移联01
@@ -1138,7 +1138,7 @@ proxy-groups:
     lazy: true
     type: select
     name: 新加坡
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Singapore.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/flag/Singapore.svg
     proxies:
       - 🇸🇬 新加坡•移联01
       - 🇸🇬 新加坡•移联02
@@ -1151,7 +1151,7 @@ proxy-groups:
     lazy: true
     type: url-test
     tolerance: 50
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Auto.svg
     name: 台湾-自动选择
     proxies:
       - 🇨🇳 台湾•移联01
@@ -1162,7 +1162,7 @@ proxy-groups:
     lazy: true
     type: select
     name: 台湾
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Taiwan.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/flag/China_Taiwan.svg
     proxies:
       - 🇨🇳 台湾•移联01
       - 🇨🇳 台湾•电信01
@@ -1173,7 +1173,7 @@ proxy-groups:
     lazy: true
     type: url-test
     tolerance: 50
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/Auto.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/Auto.svg
     name: 其他节点-自动选择
     proxies:
       - 🇰🇷 韩国•移联01
@@ -1188,7 +1188,7 @@ proxy-groups:
     lazy: true
     type: select
     name: 其他节点
-    icon: https://cdn.jsdelivr.net/gh/zt41/MyClash@main/Icons/svg/WorldMap.svg
+    icon: https://cdn.jsdelivr.net/gh/aaANDkk/Qure_Style_SVG@main/icon/svg/common/WorldMap.svg
     proxies:
       - 🇰🇷 韩国•移联01
       - 🇬🇧 英国•移联01
