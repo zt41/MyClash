@@ -744,7 +744,6 @@ const serviceConfigs = [
       'DOMAIN-SUFFIX,goemby.entertang.work,直连',
       'DOMAIN-SUFFIX,hhhk.origmiart.uk,直连',
       'DOMAIN-SUFFIX,iris.niceduck.lol,直连',
-      'DOMAIN-SUFFIX,iris.pvq.cc,直连',
       'DOMAIN-SUFFIX,iris520.vip,直连',
       'DOMAIN-SUFFIX,irisyyds.top,直连',
       'DOMAIN-SUFFIX,isif.origmiart.uk,直连',
@@ -881,6 +880,7 @@ const serviceConfigs = [
 
        // 自建/常用 Emby 访问地址 - 代理
       'DOMAIN-SUFFIX,mi.miraiemby.com,Emby',
+      'DOMAIN-SUFFIX,iris.pvq.cc,Emby',
       'DOMAIN-SUFFIX,movie.kingemby.com,Emby',
       'DOMAIN-SUFFIX,emby.zhongmo.kdns.fr,Emby',
       'DOMAIN-SUFFIX,zzxx.origamiart.uk,Emby',
