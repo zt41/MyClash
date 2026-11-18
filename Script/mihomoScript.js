@@ -862,6 +862,8 @@ const serviceConfigs = [
       'DOMAIN-SUFFIX,youjp2.567741.xyz,直连',
       'DOMAIN-SUFFIX,youus2.567741.xyz,直连',
       'DOMAIN-SUFFIX,youus3.567741.xyz,直连',
+      'DOMAIN-SUFFIX,youyes.567741.xyz,直连',
+      'DOMAIN-SUFFIX,split.567741.xyz,直连',
       'DOMAIN-SUFFIX,younoyes.com,直连',
       'DOMAIN-SUFFIX,embycc.wybcs.work,直连',
       'DOMAIN-SUFFIX,yd.7890888.xyz,直连',
