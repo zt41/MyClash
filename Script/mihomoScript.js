@@ -721,6 +721,8 @@ const serviceConfigs = [
       'DOMAIN-SUFFIX,ct.speedtest.sarl,直连',
       'DOMAIN-SUFFIX,cu.speedtest.sarl,直连',
       'DOMAIN-SUFFIX,de.origamiart.uk,直连',
+      'DOMAIN-SUFFIX,dee.origamiart.uk,直连',
+      'DOMAIN-SUFFIX,dmit.origamiart.uk,直连',
       'DOMAIN-SUFFIX,dmit.origmiart.uk,直连',
       'DOMAIN-SUFFIX,dmit2.origamiart.uk,直连',
       'DOMAIN-SUFFIX,ea.eoos.top,直连',
